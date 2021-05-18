@@ -1,0 +1,46 @@
+﻿<Page x:Class="Школа_КузьминаАА.Admin"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Школа_КузьминаАА"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="Admin">
+
+    <Grid>
+        <ScrollViewer>
+            <StackPanel>
+                <DataGrid Name="DGServises" AutoGenerateColumns="False" HorizontalAlignment="Left" IsReadOnly="True" CanUserAddRows="False"   >
+                    <DataGrid.Columns >
+                        <DataGridTemplateColumn>
+                            <DataGridTemplateColumn.CellTemplate>
+                                <DataTemplate >
+                                    <StackPanel Orientation="Horizontal" Width="500" Initialized="StackPanel_Initialized" >
+                                        <MediaElement Width="50" Height="50" Initialized="MediaElement_Initialized"></MediaElement>
+                                        <StackPanel>
+                                            <StackPanel Orientation="Vertical">
+                                                <TextBlock Initialized="TextBlock_Initialized" />
+                                                <TextBlock Name="oldcost" Initialized="oldcost_Initialized" ></TextBlock>
+                                                <TextBlock Name="cost"  Initialized="cost_Initialized"/>
+                                                <TextBlock Name="skidka" Initialized="skidka_Initialized" />
+                                            </StackPanel  >
+                                            <StackPanel Orientation="Horizontal" >
+                                                <Button Name="BRed" Content="Редактировать" Initialized="BRed_Initialized" Click="BRed_Click" />
+                                            <Button Name="BDel" Content="Удалить" />
+                                            <Button Name="BNew" Content="Новый заказ" />
+                                            </StackPanel>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </DataTemplate>
+                            </DataGridTemplateColumn.CellTemplate>
+                        </DataGridTemplateColumn>
+                    </DataGrid.Columns>
+                </DataGrid>
+            </StackPanel>
+        </ScrollViewer>
+   
+
+
+    </Grid>
+</Page>

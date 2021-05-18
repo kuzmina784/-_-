@@ -23,6 +23,11 @@ namespace Школа_КузьминаАА
         public MainWindow()
         {
             InitializeComponent();
+            Base.EM = new KyzminaEntities();
+            Frm.FM = FRM;
+
+            Frm.FM.Navigate(new Admin());
+
         }
     }
 }
